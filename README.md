@@ -1,2 +1,2 @@
-test
-test2
+cloudflared tunnel --url http://localhost:5678
+
