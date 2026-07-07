@@ -1,0 +1,15 @@
+<h2>GitHub 소스 변경 감지</h2>
+
+  <p><b>Repository:</b> {{$json.repository.full_name}}</
+  p>
+  <p><b>Branch:</b> {{$json.ref}}</p>
+  <p><b>Sender:</b> {{$json.sender.login}}</p>
+  <p><b>Compare:</b> <a
+  href="{{$json.compare}}">{{$json.compare}}</a></p>
+
+  <h3>Commits</h3>
+  <ul>
+  {{ $json.commits.map(c => `<li><b>${c.message}</
+  b><br>${c.url}</li>`).join('') }}
+  </ul>
+
